@@ -918,6 +918,13 @@ psetting('dkey_redial'   , 'url '. $prov_url_snom .'dial-log.php?user=$user_name
 # so geht die Retrieve-Taste auch ohne neue Nachrichten:
 psetting('dkey_retrieve' , 'speed voicemail');
 
+# firmware 8.2-Settings
+psetting('idle_left_key_action' , 'url '. $prov_url_snom .'dial-log.php?user=$user_name1');
+psetting('idle_right_key_action' , 'keyevent F_HELP');
+psetting('idle_up_key_action' , '');
+psetting('idle_down_key_action' , '');
+psetting('idle_ok_key_action' , 'url '. $prov_url_snom .'dial-log.php?user=$user_name1&type=out');
+psetting('idle_cancel_key_action' , '');
 
 
 #####################################################################

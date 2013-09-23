@@ -43,6 +43,7 @@ if (gs_get_conf('GS_SNOM_PROV_ENABLED')) {
 	$phone_types['snom-320'    ] = 'Snom 320';
 	$phone_types['snom-360'    ] = 'Snom 360';
 	$phone_types['snom-370'    ] = 'Snom 370';
+	$phone_types['snom-820'    ] = 'Snom 820'; 
         $phone_types['snom-870'    ] = 'Snom 870';
 }
 if (gs_get_conf('GS_SNOM_PROV_M3_ACCOUNTS')) {
@@ -94,6 +95,7 @@ if ($phone_type == '') {
 		elseif (array_key_exists('snom-320', $phone_types)) $phone_type = 'snom-320';
 		elseif (array_key_exists('snom-360', $phone_types)) $phone_type = 'snom-360';
 		elseif (array_key_exists('snom-370', $phone_types)) $phone_type = 'snom-370';
+		elseif (array_key_exists('snom-820', $phone_types)) $phone_type = 'snom-820'; 
 		elseif (array_key_exists('snom-870', $phone_types)) $phone_type = 'snom-870';
 	} else
 	if (gs_get_conf('GS_SNOM_PROV_M3_ACCOUNTS')) {
@@ -414,6 +416,9 @@ if (preg_match('/^snom-/', $phone_type)) {
 	if (preg_match('/^snom-3/', $phone_type)) {
 		echo '<a target="_blank" href="', __('http://wiki.snom.com/Settings/OEM') ,'">', sPrintF(__('Dokumentation der %s-Parameter'), 'Snom-3xx') ,'</a>';
 	}
+	else if (preg_match('/^snom-8/', $phone_type)) {
+		echo '<a target="_blank" href="', __('http://wiki.snom.com/Settings/OEM') ,'">', sPrintF(__('Dokumentation der %s-Parameter'), 'Snom-8xx') ,'</a>';
+	} 
 	else {
 		echo '<a target="_blank" href="', __('http://wiki.snom.com/') ,'">', sPrintF(__('%s-Dokumentation'), 'Snom') ,'</a>';
 	}
